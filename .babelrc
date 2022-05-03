@@ -1,0 +1,8 @@
+{
+  "presets": ["react-app"],
+  "env": {
+    "development": {
+      "presets": [["react-app", { "development": true }]]
+    }
+  }
+}
