@@ -1,8 +1,9 @@
+import React from "react";
 import { Container, FileInfo, Preview } from "./styles";
 import { CircularProgressbar } from "react-circular-progressbar";
 import { MdCheckCircle, MdError, MdLink } from 'react-icons/md';
 
-export default function FileListComponent({ files }) {
+export default function FileListComponent({ files, onDelete }) {
   return (
       <Container>
             {files.map(file => (
@@ -13,7 +14,7 @@ export default function FileListComponent({ files }) {
                             <strong>{file.name}</strong>
                             <span>
                                 {file.readableSize}
-                                {!!file.url && (<button onClick={() => {}}>Excluir</button>)}
+                                {!!file.url && (<button onClick={() => onDelete(file.id)}>Excluir</button>)}
                             </span>
                         </div>
                     </FileInfo>
