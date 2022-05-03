@@ -13,7 +13,7 @@ export default function FileListComponent({ files }) {
                             <strong>{file.name}</strong>
                             <span>
                                 {file.readableSize}
-                                {!!file.url && <button onClick={() => {}}>Excluir</button>}
+                                {!!file.url && (<button onClick={() => {}}>Excluir</button>)}
                             </span>
                         </div>
                     </FileInfo>
